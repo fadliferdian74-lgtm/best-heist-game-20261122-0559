@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Gilded Hour — a one-night heist at the Meridian Grand</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #07080e; }
+  body { display: flex; align-items: center; justify-content: center; }
+  #game {
+    width: min(100vw, 177.78vh);
+    height: min(56.25vw, 100vh);
+    display: block;
+    background: #0b0e17;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.8);
+  }
+  /* Read aloud, never shown: the status line screen readers announce. */
+  #status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+</style>
+</head>
+<body>
+<canvas id="game" width="1280" height="720" aria-label="The Gilded Hour: a top-down stealth heist game. Plan the job, dodge the guards and cameras, loot the Meridian Grand, and reach the getaway van."></canvas>
+<p id="status" role="status" aria-live="polite">Plan the heist, then begin.</p>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
