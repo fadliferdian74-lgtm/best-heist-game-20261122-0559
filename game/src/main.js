@@ -374,14 +374,14 @@ function stageShot() {
   if (shot === 'heist') {
     // Mid-gallery: the thief crosses under a sweeping camera while the
     // gallery guard's cone warms on him and the alarm bar climbs.
-    const p = tileCenter(17, 7);
+    const p = tileCenter(14, 6);
     player.x = p.x; player.y = p.y; player.angle = 0.5;
     player.carriedValue = 8400; player.carriedKg = 5;
     const g1 = guards[0];
-    const gp = tileCenter(13, 4);
+    const gp = tileCenter(12, 3);
     g1.x = gp.x; g1.y = gp.y;
-    g1.angle = Math.atan2(player.y - g1.y, player.x - g1.x) + 0.25;
-    g1.suspicion = 0.55; g1.state = 'investigate';
+    g1.angle = Math.atan2(player.y - g1.y, player.x - g1.x) + 0.1;
+    g1.suspicion = 0.7; g1.state = 'investigate';
     alarm.heat = 38; alarm.level = 1; alarm.everRaised = true;
     const cam = game.cameras.cameras[0];
     cam.facing = Math.atan2(player.y - cam.y, player.x - cam.x) + 0.15;

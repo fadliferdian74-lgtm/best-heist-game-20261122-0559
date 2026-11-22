@@ -495,7 +495,7 @@ export function paintGame(g, game, staticLayer) {
   // A soft night vignette.
   const vig = g.createRadialGradient(640, 336, 260, 640, 336, 760);
   vig.addColorStop(0, 'rgba(4,6,14,0)');
-  vig.addColorStop(1, 'rgba(4,6,14,0.42)');
+  vig.addColorStop(1, 'rgba(4,6,14,0.30)');
   g.fillStyle = vig;
   g.fillRect(0, 0, VIEW_W, ROWS * TILE);
 
